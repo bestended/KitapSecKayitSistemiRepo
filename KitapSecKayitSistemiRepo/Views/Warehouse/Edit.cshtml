@@ -1,0 +1,46 @@
+﻿@model KitapSecKayitSistemiRepo.Models.Warehouse
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3 border border-4 rounded rounded-3 p-4">
+            <h3 class="text-info p-2 m-1 text-center">Update Warehouse</h3>
+            <form method="post" asp-action="Edit">
+                <div class="form-check">
+                    <label asp-for="Place"></label>
+                    <input type="text" asp-for="Place" class="form-control" placeholder="Enter Place" />
+                    <input type="hidden" asp-for="WarehouseId" />
+                    <span class="text-danger" asp-validation-for="Place"></span>
+                </div>
+
+               
+                <div class="form-check">
+                    <label asp-for="OfficerName"></label>
+                    <input type="text" asp-for="OfficerName" class="form-control" placeholder="Enter OfficerName" />
+                    <span class="text-danger" asp-validation-for="OfficerName"></span>
+
+                </div>
+                <div class="form-check">
+                    <label asp-for="PhoneNumber"></label>
+                    <input type="text" asp-for="PhoneNumber" class="form-control" placeholder="Enter PhoneNumber" />
+                    <span class="text-danger" asp-validation-for="PhoneNumber"></span>
+
+                </div>
+                <div class="form-check">
+                    <label asp-for="Size"></label>
+                    <input type="number" asp-for="Size" class="form-control" placeholder="Enter Size" />
+                    <span class="text-danger" asp-validation-for="Size"></span>
+
+                </div>
+               
+                <div>
+                    <input type="submit" class="btn btn-sm btn-warning m-2 p-2 float-end" value="Update" />
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+﻿@model KitapSecKayitSistemiRepo.Models.Warehouse
+
+@{
+    ViewData["Title"] = "AddWarehouse";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3 border border-4 rounded rounded-3 p-4">
+            <h3 class="text-info p-2 m-1 text-center">Add Warehouse</h3>
+            <form method="post" asp-action="AddWarehouse">
+                <div class="form-check">
+                    <label asp-for="Place"></label>
+                    <input type="text" asp-for="Place" class="form-control" placeholder="Enter place" />
+
+                </div>
+
+              
+                <div class="form-check">
+                    <label asp-for="OfficerName"></label>
+                    <input type="text" asp-for="OfficerName" class="form-control" placeholder="Enter OfficerName" />
+                </div>
+                <div class="form-check">
+                    <label asp-for="PhoneNumber"></label>
+                    <input type="text" asp-for="PhoneNumber" class="form-control" placeholder="Enter PhoneNumber" />
+                </div>
+                <div class="form-check">
+                    <label asp-for="Size"></label>
+                    <input type="number" asp-for="Size" class="form-control" placeholder="Enter Size" />
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

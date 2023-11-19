@@ -1,0 +1,44 @@
+﻿@model KitapSecKayitSistemiRepo.Models.Seller
+
+@{
+    ViewData["Title"] = "AddSeller";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3 border border-4 rounded rounded-3 p-4">
+            <h3 class="text-info p-2 m-1 text-center">Add Seller</h3>
+            <form method="post" asp-action="AddSeller">
+                <div class="form-check">
+                    <label asp-for="Name"></label>
+                    <input type="text" asp-for="Name" class="form-control" placeholder="Enter name" />
+
+                </div>
+
+
+                <div class="form-check">
+                    <label asp-for="LastName"></label>
+                    <input type="text" asp-for="LastName" class="form-control" placeholder="Enter Last Name" />
+                </div>
+                <div class="form-check">
+                    <label asp-for="PhoneNumber"></label>
+                    <input type="text" asp-for="PhoneNumber" class="form-control" placeholder="Enter Phone Number" />
+                </div>
+                   <div class="form-check">
+                    <label asp-for="FoundationDate"></label>
+                    <input type="date" asp-for="FoundationDate" class="form-control" placeholder="Enter Foundation Date" />
+                </div>   <div class="form-check">
+                    <label asp-for="Address"></label>
+                    <input type="text" asp-for="Address" class="form-control" placeholder="Enter Address" />
+                    <div>
+                        <input type="submit" class="btn btn-sm btn-primary m-2 p-2 float-end" value="Save" />
+                    </div>
+                </div>
+
+
+             
+
+            </form>
+        </div>
+    </div>
+</div>

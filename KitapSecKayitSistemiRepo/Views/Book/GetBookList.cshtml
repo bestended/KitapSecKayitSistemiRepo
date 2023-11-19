@@ -1,0 +1,95 @@
+﻿@model IEnumerable<KitapSecKayitSistemiRepo.Models.Books>
+
+@{
+    ViewData["Title"] = "GetBookList";
+}
+
+
+
+<div class="container">
+    <div class="row">
+        @if (TempData["bookError"] != null)
+        {
+
+            <div class="alert alert-danger notification text-center">
+
+                @TempData["bookError"]
+            </div>
+
+        }
+
+        @if (TempData["bookSuccess"] != null)
+        {
+
+            @TempData["bookSuccess"]
+
+
+        }
+
+        <div class="col-10 offset-1">
+
+            <div class="float-end">
+                <a class="btn btn-sm btn-primary p-1 m-1" asp-action="AddBook" asp-controller="Book">Add Book</a>
+            </div>
+
+            <table class="table table-hover table-striped table-bordered ">
+                <thead class="text-center table-striped table-bordered">
+                    <tr>
+                        <th>Book Id</th>
+                        <th>BookName</th>
+                        <th>Writer</th>
+                        <th>Is Stock State</th>
+                        <th>Price</th>
+                        <th>Page Count</th>
+                        <th>Truck Id</th>
+                        <th>Seller Id</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="text-center">
+
+                            <td>@item.BookId</td>
+                            <td>@item.BookName</td>
+                            <td>@item.Writer</td>
+                            <td>
+                                @if (item.IsStockState)
+                                {
+                                    <input type="checkbox" value="@item.IsStockState" checked="checked" disabled />
+                                }
+                                else
+                                {
+                                    <input type="checkbox" value="@item.IsStockState" />
+                                }
+                            </td>
+
+                            <td>@item.Price</td>
+                            <td>@item.PageCount</td>
+                            <td>@item.TruckId</td>
+                            <td>@item.SellerId</td>
+
+                            <td>
+
+                                <a class="btn btn-sm btn-warning m-1" asp-controller="Book" asp-action="Edit" asp-route-id="@item.BookId">Edit</a>
+                                <a class="btn btn-sm btn-danger m-1" asp-controller="Book" asp-action="Delete" asp-route-id="@item.BookId">Delete</a>
+                            </td>
+
+                        </tr>
+
+
+
+                    }
+
+
+                </tbody>
+
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>

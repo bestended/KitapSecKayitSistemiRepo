@@ -1,0 +1,83 @@
+﻿@model IEnumerable<KitapSecKayitSistemiRepo.Models.Warehouse>
+
+@{
+    ViewData["Title"] = "GetWarehouseList";
+}
+
+
+
+<div class="container">
+    <div class="row">
+        @if (TempData["warehouseError"] != null)
+        {
+
+            <div class="alert alert-danger notification text-center">
+
+                @TempData["warehouseError"]
+            </div>
+
+        }
+
+        @if (TempData["warehouseSuccess"] != null)
+        {
+
+            @TempData["warehouseSuccess"]
+
+
+        }
+
+        <div class="col-10 offset-1">
+
+            <div class="float-end">
+                <a class="btn btn-sm btn-primary p-1 m-1" asp-action="AddWarehouse" asp-controller="Warehouse">Add Warehouse</a>
+            </div>
+
+            <table class="table table-hover table-striped table-bordered ">
+                <thead class="text-center table-striped table-bordered">
+                    <tr>
+                        <th>Warehouse Id</th>
+                        <th>Place</th>
+                        <th>Officer Name</th>
+                        <th>Phone Number</th>
+                        <th>Size</th>
+                       
+
+                    </tr>
+
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="text-center">
+
+                            <td>@item.WarehouseId</td>
+                            <td>@item.Place</td>
+                            <td>@item.OfficerName</td>
+                            <td>@item.PhoneNumber</td>
+                            <td>@item.Size</td>
+                     
+
+
+                            <td>
+
+                                <a class="btn btn-sm btn-warning m-1" asp-controller="Warehouse" asp-action="Edit" asp-route-id="@item.WarehouseId">Edit</a>
+                                <a class="btn btn-sm btn-danger m-1" asp-controller="Warehouse" asp-action="Delete" asp-route-id="@item.WarehouseId">Delete</a>
+                            </td>
+
+                        </tr>
+
+
+
+                    }
+
+
+                </tbody>
+
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KitapSecKayitSistemiRepo", "KitapSecKayitSistemiRepo\KitapSecKayitSistemiRepo.csproj", "{81114A9B-DFE3-4FBF-AD95-143AF4C8B7BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81114A9B-DFE3-4FBF-AD95-143AF4C8B7BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81114A9B-DFE3-4FBF-AD95-143AF4C8B7BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81114A9B-DFE3-4FBF-AD95-143AF4C8B7BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81114A9B-DFE3-4FBF-AD95-143AF4C8B7BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F2AAB33-2B09-47F2-8844-2830376ECE05}
+	EndGlobalSection
+EndGlobal

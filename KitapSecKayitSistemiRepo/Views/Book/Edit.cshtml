@@ -1,0 +1,73 @@
+﻿@model KitapSecKayitSistemiRepo.Models.Books
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3 border border-4 rounded rounded-3 p-4">
+            <h3 class="text-info p-2 m-1 text-center">Update Book</h3>
+            <form method="post" asp-action="Edit">
+                <div class="form-check">
+                    <label asp-for="BookName"></label>
+                    <input type="text" asp-for="BookName" class="form-control" placeholder="Enter Id" />
+                    <input type="hidden" asp-for="BookId" />
+                    <span class="text-danger" asp-validation-for="BookName"></span>
+                </div>
+
+           
+                <div class="form-check">
+                    <label asp-for="Writer"></label>
+                    <input type="text" asp-for="Writer" class="form-control" placeholder="Enter writer" />
+                    <span class="text-danger" asp-validation-for="Writer"></span>
+
+                </div>
+                <div class="form-check">
+                    <label asp-for="IsStockState"></label>
+                    @if (Model.IsStockState)
+                    {
+                        <input type="checkbox" asp-for="IsStockState" class="form-check-inline" checked="checked" />
+
+                    }
+                    else
+                    {
+                        <input type="checkbox" asp-for="IsStockState" class="form-check-inline" />
+                    }
+
+                    <span class="text-danger" asp-validation-for="IsStockState"></span>
+
+
+                </div>
+                <div class="form-check">
+                    <label asp-for="Price"></label>
+                    <input type="text" asp-for="Price" class="form-control" placeholder="Enter price" />
+                    <span class="text-danger" asp-validation-for="Price"></span>
+
+                </div>
+                <div class="form-check">
+                    <label asp-for="PageCount"></label>
+                    <input type="number" asp-for="PageCount" class="form-control" placeholder="Enter page count" />
+                    <span class="text-danger" asp-validation-for="PageCount"></span>
+
+                </div>
+                <div class="form-check">
+                    <label asp-for="TruckId"></label>
+                    <input type="number" asp-for="TruckId" class="form-control" placeholder="Enter Truck Id" />
+                    <span class="text-danger" asp-validation-for="TruckId"></span>
+
+                </div>
+                <div class="form-check">
+                    <label asp-for="SellerId"></label>
+                    <input type="number" asp-for="SellerId" class="form-control" placeholder="Enter Seller Id" />
+                    <span class="text-danger" asp-validation-for="SellerId"></span>
+                  
+                </div>
+
+                <div>
+                    <input type="submit" class="btn btn-sm btn-warning m-2 p-2 float-end" value="Update" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
